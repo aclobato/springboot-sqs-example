@@ -13,7 +13,7 @@ class AppPropertiesTest {
     private AppProperties properties;
 
     @Test
-    public void readProperties() {
+    public void readDurationSimulating_withValuesFromApplicationProperties_shouldReturnCorrectValue() {
         assertEquals(120000, properties.getDurationSimulating());
     }
 }

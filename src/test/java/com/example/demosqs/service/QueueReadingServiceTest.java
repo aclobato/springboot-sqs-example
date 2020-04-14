@@ -33,7 +33,7 @@ public class QueueReadingServiceTest {
     }
 
     @Test
-    public void successMessage() throws InterruptedException {
+    public void receiveMessage_withValidMessage_shouldSendResult() throws InterruptedException {
         String message = "message";
         readingService.receiveRequest(message);
 
@@ -43,7 +43,7 @@ public class QueueReadingServiceTest {
     }
 
     @Test
-    public void errorMessage() {
+    public void receiveMessage_withInvalidMessage_shouldThrowsException() {
         String message = "error";
 
         Exception exception = assertThrows(MessageProcessingException.class, () -> {

@@ -21,7 +21,7 @@ class QueueSendingServiceTest {
     private JmsTemplate jmsTemplate;
 
     @Test
-    public void successMessage() throws InterruptedException {
+    public void sendMessage_withValidMessage_shouldSendResultToQueue() throws InterruptedException {
         String message = "message";
         sendingService.sendResult(message);
 
